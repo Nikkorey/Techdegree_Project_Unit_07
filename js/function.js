@@ -30,35 +30,34 @@ send.addEventListener("click", (e) => {
   e.preventDefault();
   let users = document.getElementById("searchUsers");
   let usersNames = users.querySelectorAll("li");
-  for (let i = 0; i < usersNames.length; i++) {
-    if (user.value === "" && message.value === "") {
-      alertHTML(
-        "Error",
-        "Please fill out user and message fields before sending.",
-        "tomato"
-      );
-      alertStyle("tomato  ");
-    } else if (user.value === "") {
-      alertHTML(
-        "Error",
-        "Please fill out user field before sending.",
-        "tomato"
-      );
-    } else if (message.value == "") {
-      alertHTML(
-        "Error",
-        "Please fill out message field before sending.",
-        "tomato"
-      );
-    } else if (user.value !== usersNames[1].innerText) {
-      alertHTML(
-        "Error",
-        "Message unsuccessfully sent, there is no such member that matches your user search.",
-        "tomato"
-      );
-    } else {
-      alertHTML("Success", "Message sent successfully.", "#81c98f");
-    }
+  if (user.value === "" && message.value === "") {
+    alertHTML(
+      "Error",
+      "Please fill out user and message fields before sending.",
+      "tomato"
+    );
+    alertStyle("tomato  ");
+  } else if (user.value === "") {
+    alertHTML("Error", "Please fill out user field before sending.", "tomato");
+  } else if (message.value == "") {
+    alertHTML(
+      "Error",
+      "Please fill out message field before sending.",
+      "tomato"
+    );
+  } else if (
+    user.value !== usersNames[0].innerText &&
+    user.value !== usersNames[1].innerText &&
+    user.value !== usersNames[2].innerText &&
+    user.value !== usersNames[3].innerText
+  ) {
+    alertHTML(
+      "Error",
+      "Message unsuccessfully sent, there is no such member that matches your user search.",
+      "tomato"
+    );
+  } else {
+    alertHTML("Success", "Message sent successfully.", "#81c98f");
   }
 });
 
