@@ -1,0 +1,32 @@
+.widget-container-half {
+  width: 90vw;
+  height: 25vh;
+}
+
+.traffic__chart {
+  width: 90vw;
+  height: 25vh;
+}
+
+@media (min-width: 768px) {
+  .widget-container-half {
+    width: 90vw;
+    height: 40vh;
+  }
+  .traffic__chart {
+    width: 90vw;
+    height: 30vh;
+  }
+}
+
+@media (min-width: 1024px) {
+  .traffic__chart {
+    height: 40vh;
+  }
+
+  .widget-container-half {
+    width: 40vw;
+    height: 40vh;
+    max-height: 50vh;
+  }
+}

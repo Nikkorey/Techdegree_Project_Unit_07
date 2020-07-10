@@ -1,0 +1,30 @@
+#alert {
+  border: solid;
+  padding: 1rem;
+  background-color: $color-primary;
+  color: #fff;
+
+  border-radius: 0.5rem;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+#closeHello {
+  width: 1rem;
+  height: 1rem;
+}
+
+@media (min-width: 1024px) {
+  #alert {
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+  }
+
+  #closeHello {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}

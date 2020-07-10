@@ -1,0 +1,72 @@
+.heading-1 {
+  color: $color-white;
+  font-size: 1.5rem;
+
+  &--bold {
+    font-weight: 800;
+    font-size: 2.5rem;
+  }
+}
+
+.heading-2 {
+  font-size: 2.5rem;
+  font-family: $font-secondary;
+}
+
+.heading-3 {
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.heading-4 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  &--light {
+    color: $color-white;
+    font-size: 1.5rem;
+    font-weight: normal;
+  }
+
+  &--social {
+    font-size: 2rem;
+    color: $color-primary;
+    font-weight: 700;
+  }
+}
+
+@media (min-width: 768px) {
+  .heading-1 {
+    font-size: 1.5rem;
+
+    &--bold {
+      font-size: 3rem;
+    }
+  }
+
+  .heading-2 {
+    font-size: 3rem;
+    margin: 0 3.5rem;
+  }
+
+  .heading-3 {
+    font-size: 1.9rem;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heading-3 {
+    font-size: 2.1rem;
+    text-align: left;
+  }
+
+  .heading-4 {
+    font-size: 1.4rem;
+    &--social {
+      font-size: 2.2rem;
+    }
+  }
+}

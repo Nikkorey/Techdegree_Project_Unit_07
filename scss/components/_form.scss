@@ -1,0 +1,42 @@
+.form {
+  &__field {
+    width: 100%;
+    padding: 1rem;
+    outline: none;
+  }
+
+  &__area {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    outline: none;
+    height: 16rem;
+    margin-top: 2rem;
+  }
+}
+
+.timezone {
+  width: 100%;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+.user {
+  font-size: 1.3rem;
+  font-weight: bold;
+  display: none;
+  z-index: 1;
+  &__items {
+    padding: 0.5rem;
+
+    &-bg {
+      background-color: #eaeaea;
+    }
+
+    &:hover {
+      background-color: $color-primary;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+}

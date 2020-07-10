@@ -1,0 +1,52 @@
+.btn {
+  width: 100%;
+  margin: 1rem 0;
+  padding: 1rem 0;
+  border-radius: 0.5rem;
+  outline: none;
+  text-transform: uppercase;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+
+  &-primary {
+    background: $color-primary;
+    color: $color-white;
+    transition: all 0.5s;
+    &:hover {
+      background: $color-primary-dark;
+      color: $color-white;
+    }
+  }
+  &-disabled {
+    background-color: $color-grey;
+    transition: all 0.5s;
+    &:hover {
+      background: $color-grey--dark1;
+      color: $color-white;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .btn {
+    border-radius: 0.5rem;
+    padding: 1.3rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .settings-button {
+    display: flex;
+  }
+
+  .btn {
+    border-radius: 0.8rem;
+    padding: 1.5rem;
+  }
+
+  .btn-disabled {
+    margin-left: 3rem;
+  }
+}

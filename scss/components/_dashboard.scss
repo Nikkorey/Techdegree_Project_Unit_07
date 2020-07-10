@@ -1,0 +1,40 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+
+  &__input {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 2rem;
+    border: solid 0.1rem $color-grey--dark1;
+    text-align: center;
+    background-color: $color-grey--light;
+  }
+
+  &__search {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .dashboard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+
+    &__input {
+      width: 90%;
+      margin-top: 0;
+      text-align: right;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  // .dashboard {
+  //   grid-area: dashboard;
+  // }
+}

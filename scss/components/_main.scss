@@ -1,0 +1,27 @@
+@media (min-width: 1024px) {
+  .main-container {
+    background-color: $color-grey--dark1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    grid-gap: 1px;
+
+    grid-template-areas:
+      "traffic traffic"
+      "daily mobile"
+      "social social"
+      "members activity"
+      "message settings";
+  }
+
+  .traffic,
+  .daily,
+  .mobile,
+  .social,
+  .members,
+  .activity,
+  .message,
+  .settings {
+    background-color: #fff;
+  }
+}

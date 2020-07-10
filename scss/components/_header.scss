@@ -1,0 +1,100 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: $color-primary;
+  padding: 1rem 3rem;
+
+  &__info {
+    display: flex;
+    align-items: center;
+  }
+
+  &__notification {
+    position: relative;
+  }
+
+  &__bell {
+    width: 25px;
+    transition: 0.5s;
+    margin-right: 3rem;
+    cursor: pointer;
+
+    &:hover {
+      transform: rotate(20deg);
+    }
+
+    &-circle {
+      background-color: #1fc01f;
+      border-radius: 50%;
+      height: 1rem;
+      width: 1rem;
+      position: absolute;
+      top: -0.5rem;
+      left: 2.8rem;
+    }
+  }
+
+  &__photo {
+    width: 4rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+  }
+}
+
+.notification {
+  position: absolute;
+  top: 4.7rem;
+  left: -3.5rem;
+  width: 300px;
+  background-color: #dadada;
+  z-index: 1;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  visibility: visible;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+
+    &:not(:last-child) {
+      border-bottom: 0.1rem solid;
+    }
+  }
+
+  &__item p {
+    flex-grow: 2;
+    font-size: 1.3rem;
+  }
+
+  &__close {
+    width: 1.2rem;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.border-line {
+  border: solid 0.12rem $color-primary-dark;
+  height: 4rem;
+  margin-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .header {
+    grid-area: head;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .notification {
+    top: 5.2rem;
+    left: -10rem;
+    width: 350px;
+  }
+}
