@@ -64,7 +64,7 @@ send.addEventListener("click", (e) => {
 window.addEventListener("load", () => {
   setProfile.checked = localStorage.getItem("setProfile") === "true";
   setEmail.checked = localStorage.getItem("setEmail") === "true";
-  timezone.value = localStorage.getItem("timeZoneItem");
+  timezone.value = localStorage.getItem("timeZoneItem") || "";
 });
 
 // Notification DropDown
