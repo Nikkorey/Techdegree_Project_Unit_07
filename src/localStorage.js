@@ -1,8 +1,15 @@
-// Local Storage Function
+import get from "./getElement.js";
+import alertHTML from "./alertMessage.js";
+
+// Save & Cancel Settings Variable
+const saveSettings = get("#save");
+const cancelSettings = get("#cancel");
+
+// Local Storage Save Settings
 saveSettings.addEventListener("click", () => {
-  let setProfile = document.getElementById("setProfile");
-  let setEmail = document.getElementById("setEmail");
-  let timeZone = document.getElementById("timezone");
+  let setProfile = get("#setProfile");
+  let setEmail = get("#setEmail");
+  let timeZone = get("#timezone");
   if (setProfile.checked === true) {
     localStorage.setItem("setProfile", "true");
   } else {
@@ -25,6 +32,7 @@ saveSettings.addEventListener("click", () => {
   alertHTML("Success", "Settings saved successfully.", "#81c98f");
 });
 
+// Local Storage Cancel Settings
 cancelSettings.addEventListener("click", () => {
   if (setProfile.checked) {
     setProfile.checked = false;
