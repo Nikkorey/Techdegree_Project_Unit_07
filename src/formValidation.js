@@ -1,7 +1,8 @@
 import get from "./getElement.js";
 import getAll from "./getAllElement.js";
-import alertHTML from "./alertMessage.js";
+import { alertHTML } from "./alertMessage.js";
 
+// Get Element
 const user = get("#userField");
 const message = get("#messageField");
 const send = get("#send");
@@ -37,7 +38,11 @@ send.addEventListener("click", (e) => {
       "tomato"
     );
   } else {
-    alertHTML("Success", "Message sent successfully.", "#81c98f");
+    alertHTML(
+      "Success",
+      `Message sent successfully to ${user.value}`,
+      "#81c98f"
+    );
   }
 });
 

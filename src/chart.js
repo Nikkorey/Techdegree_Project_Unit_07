@@ -1,6 +1,9 @@
-let trafficCanvas = document.getElementById("traffic-chart");
-const dailyCanvas = document.getElementById("daily-chart");
-const mobileCanvas = document.getElementById("mobile-chart");
+import get from "./getElement.js";
+import { weeklyData, weeklyLabels } from "./lineChartData.js";
+
+let trafficCanvas = get("#traffic-chart");
+const dailyCanvas = get("#daily-chart");
+const mobileCanvas = get("#mobile-chart");
 
 // Traffic Line Chart
 
@@ -142,7 +145,7 @@ const mobileOptions = {
   },
 };
 
-let trafficChart = new Chart(trafficCanvas, {
+export let trafficChart = new Chart(trafficCanvas, {
   type: "line",
   data: trafficData,
   options: trafficOptions,
