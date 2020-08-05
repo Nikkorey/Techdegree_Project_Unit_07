@@ -17,11 +17,11 @@
   }
 }
 
-.nav__border {
+.nav__active {
   position: relative;
 }
 
-.nav__border::before {
+.nav__active::before {
   content: "";
   position: absolute;
   top: -1.5rem;
@@ -49,7 +49,7 @@
     margin: 3rem 0;
   }
 
-  .nav__border::before {
+  .nav__active::before {
     transition: opacity 0.5s;
     content: "";
     position: absolute;

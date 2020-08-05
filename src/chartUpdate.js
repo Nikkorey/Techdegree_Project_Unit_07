@@ -35,15 +35,21 @@ trafficLink.forEach((item) => {
   });
 });
 
-// Traffic Navigation Update
-const trafficNav = get("#traffic");
-const trafficNavLink = trafficNav.getElementsByClassName("traffic__link");
+// Traffic Navigation Link Active
 
-for (let i = 0; i < trafficNavLink.length; i++) {
-  trafficNavLink[i].addEventListener("click", () => {
-    var current = document.getElementsByClassName("active");
-    console.log(current);
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
+// Get Variable of all list
+const trafficNavLink = getAll(".traffic__link");
+console.log(trafficNavLink[0]);
+
+// iterate the array using foreach
+trafficNavLink.forEach((links) => {
+  // Add a click Event Listener for each item
+  links.addEventListener("click", (e) => {
+    // get the element with the the active class
+    var active = get(".active");
+    // replace or to remove the active class of the element
+    active.className = active.className.replace(" active", "");
+    // add active class in each element
+    e.target.className += " active";
   });
-}
+});

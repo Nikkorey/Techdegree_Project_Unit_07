@@ -278,11 +278,11 @@ body {
   opacity: 1;
 }
 
-.nav__border {
+.nav__active {
   position: relative;
 }
 
-.nav__border::before {
+.nav__active::before {
   content: "";
   position: absolute;
   top: -1.5rem;
@@ -316,7 +316,7 @@ body {
     width: 38px;
     margin: 3rem 0;
   }
-  .nav__border::before {
+  .nav__active::before {
     -webkit-transition: opacity 0.5s;
     transition: opacity 0.5s;
     content: "";
@@ -459,7 +459,9 @@ body {
 
 .traffic__link {
   cursor: pointer;
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem 1rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .traffic__link:not(:first-child) {
@@ -491,7 +493,7 @@ body {
   }
   .traffic__link {
     cursor: pointer;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 2rem;
   }
 }
 

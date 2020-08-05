@@ -11,7 +11,8 @@
 
   &__link {
     cursor: pointer;
-    padding: 0.5rem 0.5rem;
+    padding: 0.5rem 1rem;
+    transition: 0.3s;
 
     &:not(:first-child) {
       margin-left: 2.5rem;
@@ -41,7 +42,7 @@
 
     &__link {
       cursor: pointer;
-      padding: 0.5rem 1rem;
+      padding: 0.5rem 2rem;
     }
   }
 }
